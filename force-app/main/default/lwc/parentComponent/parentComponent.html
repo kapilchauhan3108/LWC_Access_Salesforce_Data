@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card label  = "Parent Component">
+
+    <lightning-card>
+       <ul>
+          <template for:each = {meetingRoomInfo} for:item = "item">
+             <li key = {item.roomNumber}>
+             <c-meeting-room-info meeting-room-info = {item}>
+             </c-meeting-room-info>                
+             </li>        
+           </template>
+       </ul> 
+     </lightning-card>
+
+     <lightning-card>
+     Selected Meeting room is  : {meetingRoomSelected}
+    </lightning-card>
+
+   </lightning-card> 
+
+</template>
+
+
