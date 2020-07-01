@@ -1,5 +1,5 @@
 const calculateBMI = function(height , weight){
-    return wieght /(height * height);  
+    return weight /(height * height);  
 }
 
 export {calculateBMI};

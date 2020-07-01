@@ -1,0 +1,32 @@
+<template>
+
+
+    <lightning-card title="All Account Details">
+        
+        <ul>
+         <template if:true= {responseReceived}> 
+        <template for:each= {accountList.data} for:item = "account">
+
+           <li key = {account.id}> {account.Name}</li>
+           <li key = {account.id}> {account.Phone}</li>
+           <li key = {account.id}> {account.Website}</li>
+        </template>
+        </template>  
+        </ul>
+    </lightning-card>
+
+
+    <lightning-card title = "Account Based on User">
+
+        <lightning-input label = "Enter Number" type="Number" onchange = {changeNumberOfAccount}></lightning-input>
+        <lightning-button label = "Get Accounts"  onclick={getAccounts}></lightning-button>
+        <ul>
+           <template for:each= {fetchedAccount} for:item = "account">
+              <li key = {account.id}> {account.Name}</li>
+              <li key = {account.id}> {account.Phone}</li>
+              <li key = {account.id}> {account.Website}</li>
+           </template>
+           </ul>
+    </lightning-card>    
+    
+</template>
