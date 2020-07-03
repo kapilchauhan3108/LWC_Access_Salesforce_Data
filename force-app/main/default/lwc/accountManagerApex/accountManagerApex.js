@@ -4,7 +4,7 @@ import getAllAccountBasedOnUser from '@salesforce/apex/AccountManagerClass.retur
 export default class AccountManagerApex extends LightningElement {
 
 
-
+// Account List using Wire Service ------------------------
     @wire(getAllAccount)accountList;
 
 
@@ -15,7 +15,9 @@ export default class AccountManagerApex extends LightningElement {
             return false ;
         }
     }
+//-------------------------------------------------------
 
+// Accessing Apex method without using wire -----------------------------------
 
     totalNumber;
    @track fetchedAccount;

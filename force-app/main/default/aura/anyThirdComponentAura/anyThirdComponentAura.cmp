@@ -1,0 +1,12 @@
+<aura:component implements = "flexipage:availableForAllPageTypes">
+
+<aura:attribute name = "SelectedMeetingRoom" type = "Object"/>
+
+<div style="border : 2px solid red">
+
+    <c:auraPubsub aura:id = "pubSubModule" onready = "{!c.subscribeEvent}"/>
+       You have selected meeting room {!v.SelectedMeetingRoom.roomNumber}
+
+    </div>
+
+</aura:component>	

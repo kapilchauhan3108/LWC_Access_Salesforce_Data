@@ -31,7 +31,7 @@
 
         <lightning-card title="Account forms">
              
-            <lightning-record-form object-api-name= "Account" record-id = {accountId} mode = "edit" onsubmit = {handleSubmit} fields={fields}>
+            <lightning-record-form object-api-name= {objectApiName} record-id = {recordIdForForm} mode = "edit" onsubmit = {handleSubmit} fields={fields}>
             </lightning-record-form>
         </lightning-card>  
     </lightning-card>
